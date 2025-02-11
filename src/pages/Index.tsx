@@ -42,10 +42,9 @@ const Index = () => {
       company: "KreditBee",
       period: "Jan 2023 - Present",
       description: [
-        "Led performance optimization reducing main chunk size by 33kb and improving loading time",
-        "Developed 130+ reusable UI components, reducing development time by 40% across platforms",
-        "Implemented Storybook for visual and interaction testing",
-        "Designed custom screens reducing codebase from 20K to 4K lines of code"
+        "Worked on the performance optimization for the initial load of the application from login to home page. Reduced the 33kb main chunk size. This optimization also led to a notable improvement in overall loading time, providing a smoother and faster user experience for customers accessing the application.",
+        "Led the development of 130+ reusable UI components, reducing front-end development time by 40% across Android, iOS, and Web platforms. It brought the uniformity throughout the application on all 3 platforms Android, iOS and Web. Implemented storybook for better visual, Interaction testing and assertions.",
+        "Designed reusable custom screens that cut development time by 50%, reducing the codebase from 20K to 4K lines of code, increasing the multiple teams efficiency."
       ]
     },
     {
@@ -53,10 +52,12 @@ const Index = () => {
       company: "Nouveau Labs",
       period: "Nov 2021 - Jan 2023",
       description: [
-        "Built React-Redux dashboards using Micro Frontend technique",
-        "Developed Cyber Security dashboards with Angular 11 and RxJs",
-        "Implemented AWS services including Amplify, Cognito, and Firebase Cloud Messaging",
-        "Managed CI/CD deployments using Terraform/Yaml, AWS S3, CloudFront, and Route 53"
+        "Building React-Redux dashboards for cloud communication using Micro Fronted technique.",
+        "Developed multiple dashboards for Cyber Security using Angular 11 framework and RxJs library.",
+        "Solved multiple bugs in the existing dashboard and added new features.",
+        "Created a demo web app using React-Redux in the front-end. Using Amazon-Amplify, Cognito services for credential management and Firebase Cloud messaging service for the incoming call notification.",
+        "Deployed the code changes to different environments from Gitlab CI/CD using Terraform/Yaml, AWS S3, CloudFront, Route 53 and pipeline code optimization/fixes.",
+        "Converted client Figma designs to dashboards with custom Material design components (Angular/React)."
       ]
     },
     {
@@ -64,10 +65,10 @@ const Index = () => {
       company: "Kantar",
       period: "Sep 2020 - Nov 2021",
       description: [
-        "Created interactive dashboards using Angular, JavaScript, Lodash, and jQuery",
-        "Developed cross-platform applications with multiple views and data filters",
-        "Implemented 20+ charts using HighCharts library",
-        "Built user management system with activity tracking and export capabilities"
+        "Engineering excellence tasks - Created user friendly interactive dashboards for the client using Angular, JavaScript, Lodash, SCSS and jQuery",
+        "Worked on a 4-page application which contains 10+ views. Able to view/navigate sub modules in a single dashboard. Enable dashboard for the cross-platform Chrome, Edge and IE",
+        "Design and create multiple data filters to see the different aspects of the data. Plotted user friendly 20 plus charts using HighCharts library.",
+        "Added user management system for Admin to see the different activities and actions taken by the end users. Worked on exports of the same details in Excel."
       ]
     },
     {
@@ -75,9 +76,9 @@ const Index = () => {
       company: "Kantar",
       period: "Jun 2019 - Aug 2020",
       description: [
-        "Built dashboards using ADO.NET with multiple export formats",
-        "Developed security dashboards with Angular 11 and RxJs",
-        "Created architectural design for data queries using stored procedures"
+        "Successfully built a dashboard for clients using ADO.NET technology. End users are also able to download the dashboard data in different Exports formats like Excel, PPT and PDF.",
+        "Developed multiple dashboards for Cyber Security using Angular 11 framework and RxJs library.",
+        "Created architectural design for data query through stored procedures(SP) in ADO.NET project and integrated the same data to dashboard."
       ]
     }
   ];
@@ -108,7 +109,7 @@ const Index = () => {
   const technicalStrengths = {
     "Programming Languages": ["JavaScript", "React", "Angular"],
     "Libraries": ["Tanstack(React-Query)", "Storybook", "HighChart", "GraphQL", "MUI"],
-    "Frameworks": ["React-Redux", "Next.js", "RxJs", "ADO .NET"],
+    "Frameworks": ["React-Redux", "Next.js", "RxJs", "ADO.NET"],
     "Tools": ["Cypress", "Jest", "Webpack", "Amazon Amplify"],
     "Cloud Services": ["AWS S3", "CloudFront", "Firebase", "Route 53", "CI/CD"]
   };
