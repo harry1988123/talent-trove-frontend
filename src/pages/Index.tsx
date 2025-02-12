@@ -128,7 +128,7 @@ const Index = () => {
     },
     "Cloud Services": {
       skills: ["AWS S3", "CloudFront", "Firebase", "Route 53", "CI/CD"],
-      icon: "https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/amazonwebservices/amazonwebservices-original.svg"
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
     }
   };
 
