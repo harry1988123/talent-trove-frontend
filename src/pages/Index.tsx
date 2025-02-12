@@ -144,7 +144,7 @@ const Index = () => {
         transition={{ duration: 0.6 }}
         className="h-screen flex flex-col items-center justify-center px-4 text-center relative"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&auto=format&fit=crop&q=60)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1800&auto=format&fit=crop&q=80)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
