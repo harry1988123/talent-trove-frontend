@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
@@ -87,31 +86,50 @@ const Index = () => {
     {
       title: "Inventory Management",
       tech: "Angular and SCSS",
-      preview: "Preview"
+      preview: "Preview",
+      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&auto=format&fit=crop&q=60"
     },
     {
       title: "Image Search",
       tech: "React",
-      preview: "Preview"
+      preview: "Preview",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=60"
     },
     {
       title: "Crypto Tracker",
       tech: "Angular and Webhooks",
-      preview: "Preview"
+      preview: "Preview",
+      image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&auto=format&fit=crop&q=60"
     },
     {
       title: "AWS Cognito",
       tech: "React",
-      preview: "Preview"
+      preview: "Preview",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=60"
     }
   ];
 
   const technicalStrengths = {
-    "Programming Languages": ["JavaScript", "React", "Angular"],
-    "Libraries": ["Tanstack(React-Query)", "Storybook", "HighChart", "GraphQL", "MUI"],
-    "Frameworks": ["React-Redux", "Next.js", "RxJs", "ADO.NET"],
-    "Tools": ["Cypress", "Jest", "Webpack", "Amazon Amplify"],
-    "Cloud Services": ["AWS S3", "CloudFront", "Firebase", "Route 53", "CI/CD"]
+    "Programming Languages": {
+      skills: ["JavaScript", "React", "Angular"],
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    },
+    "Libraries": {
+      skills: ["Tanstack(React-Query)", "Storybook", "HighChart", "GraphQL", "MUI"],
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    },
+    "Frameworks": {
+      skills: ["React-Redux", "Next.js", "RxJs", "ADO.NET"],
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+    },
+    "Tools": {
+      skills: ["Cypress", "Jest", "Webpack", "Amazon Amplify"],
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
+    },
+    "Cloud Services": {
+      skills: ["AWS S3", "CloudFront", "Firebase", "Route 53", "CI/CD"],
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+    }
   };
 
   return (
@@ -124,33 +142,41 @@ const Index = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="h-screen flex flex-col items-center justify-center px-4 text-center"
+        className="h-screen flex flex-col items-center justify-center px-4 text-center relative"
+        style={{
+          backgroundImage: 'url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&auto=format&fit=crop&q=60)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
       >
-        <Badge className="mb-4">Open to Opportunities</Badge>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">Harendra Singh</h1>
-        <div className="text-xl md:text-2xl text-muted-foreground mb-4 space-y-2">
-          <p>Senior Software Engineer</p>
-          <p className="text-base">Bangalore - 560008</p>
-          <p className="text-base">pal.harendra95@gmail.com • +91-9790729403</p>
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="relative z-10">
+          <Badge className="mb-4">Open to Opportunities</Badge>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Harendra Singh</h1>
+          <div className="text-xl md:text-2xl text-muted-foreground mb-4 space-y-2">
+            <p>Senior Software Engineer</p>
+            <p className="text-base">Bangalore - 560008</p>
+            <p className="text-base">pal.harendra95@gmail.com • +91-9790729403</p>
+          </div>
+          <div className="flex gap-4">
+            <Button variant="outline" size="icon" asChild>
+              <a href="https://github.com/harendra21" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <a href="https://linkedin.com/in/harendra-singh1995" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <a href="mailto:pal.harendra95@gmail.com">
+                <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+          </div>
         </div>
-        <div className="flex gap-4">
-          <Button variant="outline" size="icon" asChild>
-            <a href="https://github.com/harendra21" target="_blank" rel="noopener noreferrer">
-              <Github className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button variant="outline" size="icon" asChild>
-            <a href="https://linkedin.com/in/harendra-singh1995" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button variant="outline" size="icon" asChild>
-            <a href="mailto:pal.harendra95@gmail.com">
-              <Mail className="h-5 w-5" />
-            </a>
-          </Button>
-        </div>
-        <ChevronDown className="absolute bottom-8 animate-bounce h-6 w-6 text-muted-foreground" />
+        <ChevronDown className="absolute bottom-8 animate-bounce h-6 w-6 text-muted-foreground z-10" />
       </motion.header>
 
       <main className="container max-w-4xl mx-auto px-4 py-16">
@@ -188,7 +214,14 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-8">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="glass-card p-6 rounded-lg">
+              <div key={index} className="glass-card p-6 rounded-lg overflow-hidden">
+                <div className="aspect-video mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.tech}</p>
                 <Button variant="outline" size="sm">
@@ -202,9 +235,12 @@ const Index = () => {
         <section className="section-fade mb-20">
           <h2 className="text-3xl font-bold mb-8">Technical Skills</h2>
           <div className="grid gap-6">
-            {Object.entries(technicalStrengths).map(([category, skills]) => (
+            {Object.entries(technicalStrengths).map(([category, { skills, icon }]) => (
               <div key={category} className="glass-card p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-4">{category}</h3>
+                <div className="flex items-center gap-4 mb-4">
+                  <img src={icon} alt={category} className="w-8 h-8" />
+                  <h3 className="text-lg font-semibold">{category}</h3>
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill, i) => (
                     <Badge key={i} variant="secondary">
