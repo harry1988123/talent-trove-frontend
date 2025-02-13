@@ -105,7 +105,7 @@ const Index = () => {
       title: "AWS Cognito",
       tech: "React",
       preview: "Preview",
-      image: "https://static.us-east-1.prod.workshops.aws/public/16b72c97-39c6-4737-93e0-a2d786a0744b/static/images/cognito.svg"
+      image: "https://raw.githubusercontent.com/aws-samples/aws-amplify-identity-broker/master/documentation/architecture.png"
     }
   ];
 
