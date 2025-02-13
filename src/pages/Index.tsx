@@ -132,6 +132,27 @@ const Index = () => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="fixed top-4 right-4 z-50">
@@ -141,7 +162,7 @@ const Index = () => {
       <motion.header 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="h-screen flex flex-col items-center justify-center px-4 text-center relative"
         style={{
           backgroundImage: 'url(https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1800&auto=format&fit=crop&q=80)',
@@ -150,15 +171,24 @@ const Index = () => {
         }}
       >
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-        <div className="relative z-10">
-          <Badge className="mb-4">Open to Opportunities</Badge>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Harendra Singh</h1>
-          <div className="text-xl md:text-2xl text-muted-foreground mb-4 space-y-2">
+        <motion.div 
+          className="relative z-10"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={itemVariants}>
+            <Badge className="mb-4">Open to Opportunities</Badge>
+          </motion.div>
+          <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
+            Harendra Singh
+          </motion.h1>
+          <motion.div variants={itemVariants} className="text-xl md:text-2xl text-muted-foreground mb-4 space-y-2">
             <p>Senior Software Engineer</p>
             <p className="text-base">Bangalore - 560008</p>
             <p className="text-base">pal.harendra95@gmail.com • +91-9790729403</p>
-          </div>
-          <div className="flex gap-4">
+          </motion.div>
+          <motion.div variants={itemVariants} className="flex gap-4 justify-center">
             <Button variant="outline" size="icon" asChild>
               <a href="https://github.com/harendra21" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
@@ -174,27 +204,52 @@ const Index = () => {
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
-          </div>
-        </div>
-        <ChevronDown className="absolute bottom-8 animate-bounce h-6 w-6 text-muted-foreground z-10" />
+          </motion.div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+        >
+          <ChevronDown className="absolute bottom-8 animate-bounce h-6 w-6 text-muted-foreground z-10" />
+        </motion.div>
       </motion.header>
 
       <main className="container max-w-4xl mx-auto px-4 py-16">
-        <section className="section-fade mb-20">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
           <h2 className="text-3xl font-bold mb-8">Education</h2>
           <div className="glass-card p-6 rounded-lg">
             <h3 className="text-xl font-semibold">VIT Chennai</h3>
             <p className="text-muted-foreground">Bachelor of Technology in Computer Science</p>
             <p className="text-muted-foreground">CGPA: 8.03/10 (2015 – 2019)</p>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="section-fade mb-20">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
           <h2 className="text-3xl font-bold mb-8">Experience</h2>
           <div className="relative pl-8">
             <div className="timeline-line" />
             {experiences.map((exp, index) => (
-              <div key={index} className="mb-8 relative">
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="mb-8 relative"
+              >
                 <div className="timeline-dot" />
                 <div className="glass-card p-6 rounded-lg ml-4">
                   <h3 className="text-xl font-semibold">{exp.title}</h3>
@@ -205,16 +260,29 @@ const Index = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        <section className="section-fade mb-20">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
           <h2 className="text-3xl font-bold mb-8">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <div key={index} className="glass-card p-6 rounded-lg overflow-hidden">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="glass-card p-6 rounded-lg overflow-hidden"
+              >
                 <div className="aspect-video mb-4 overflow-hidden rounded-lg">
                   <img 
                     src={project.image} 
@@ -227,16 +295,29 @@ const Index = () => {
                 <Button variant="outline" size="sm">
                   {project.preview}
                 </Button>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        <section className="section-fade mb-20">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
           <h2 className="text-3xl font-bold mb-8">Technical Skills</h2>
           <div className="grid gap-6">
-            {Object.entries(technicalStrengths).map(([category, { skills, icon }]) => (
-              <div key={category} className="glass-card p-6 rounded-lg">
+            {Object.entries(technicalStrengths).map(([category, { skills, icon }], index) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="glass-card p-6 rounded-lg"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <img src={icon} alt={category} className="w-8 h-8" />
                   <h3 className="text-lg font-semibold">{category}</h3>
@@ -248,12 +329,17 @@ const Index = () => {
                     </Badge>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        <section className="section-fade">
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
           <div className="glass-card p-8 rounded-lg text-center">
             <p className="text-lg mb-6">
@@ -266,7 +352,7 @@ const Index = () => {
               </a>
             </Button>
           </div>
-        </section>
+        </motion.section>
       </main>
     </div>
   );
