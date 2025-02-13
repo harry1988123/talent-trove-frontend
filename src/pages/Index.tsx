@@ -188,7 +188,7 @@ const Index = () => {
             <p className="text-base">Bangalore - 560008</p>
             <p className="text-base">pal.harendra95@gmail.com • +91-9790729403</p>
           </motion.div>
-          <motion.div variants={itemVariants} className="flex gap-4 justify-center">
+          <motion.div variants={itemVariants} className="flex gap-4 justify-center items-center mx-auto">
             <Button variant="outline" size="icon" asChild>
               <a href="https://github.com/harendra21" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
