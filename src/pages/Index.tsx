@@ -84,27 +84,45 @@ const Index = () => {
 
   const projects = [
     {
-      title: "Inventory Management",
-      tech: "Angular and SCSS",
-      preview: "Preview",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&auto=format&fit=crop&q=60"
-    },
-    {
       title: "Image Search",
-      tech: "React",
-      preview: "Preview",
+      tech: "React Project",
+      preview: "https://condescending-boyd-93b04c.netlify.app/",
+      github: "https://github.com/harry1988123/MindPeers_Task",
       image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=60"
     },
     {
       title: "Crypto Tracker",
-      tech: "Angular and Webhooks",
-      preview: "Preview",
+      tech: "Angular Project",
+      preview: "https://614ef9cfa494f61449915e2b--friendly-dubinsky-56c396.netlify.app",
+      github: "https://github.com/harry1988123/CryptoTracker",
       image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&auto=format&fit=crop&q=60"
     },
     {
-      title: "AWS Cognito",
-      tech: "React",
-      preview: "Preview",
+      title: "Emoji",
+      tech: "React Project",
+      preview: "https://cranky-pare-68e9cb.netlify.app/",
+      github: "https://github.com/harry1988123/rocketlane",
+      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&auto=format&fit=crop&q=60"
+    },
+    {
+      title: "Credit Card",
+      tech: "Angular Project",
+      preview: "https://inspiring-khorana-c72295.netlify.app/",
+      github: "https://github.com/harry1988123/spaktask",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop&q=60"
+    },
+    {
+      title: "Inventory Management",
+      tech: "React Project",
+      preview: "https://deft-blini-6fc00e.netlify.app/",
+      github: "https://github.com/harry1988123/symbio-inventory",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop&q=60"
+    },
+    {
+      title: "AWS Cognito Login System",
+      tech: "React Project",
+      preview: "https://graceful-longma-307789.netlify.app/",
+      github: "https://github.com/harry1988123/dophinDemoApp",
       image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&auto=format&fit=crop&q=60"
     }
   ];
@@ -291,9 +309,18 @@ const Index = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.tech}</p>
-                <Button variant="outline" size="sm">
-                  {project.preview}
-                </Button>
+                <div className="flex gap-2">
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={project.preview} target="_blank" rel="noopener noreferrer">
+                      View Project
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      Source Code
+                    </a>
+                  </Button>
+                </div>
               </motion.div>
             ))}
           </div>
