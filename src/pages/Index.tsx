@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
@@ -88,25 +87,25 @@ const Index = () => {
       title: "Inventory Management",
       tech: "Angular and SCSS",
       preview: "Preview",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&auto=format&fit=crop&q=60"
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/Angular.png"
     },
     {
       title: "Image Search",
       tech: "React",
       preview: "Preview",
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=60"
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/1.jpg"
     },
     {
       title: "Crypto Tracker",
       tech: "Angular and Webhooks",
       preview: "Preview",
-      image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&auto=format&fit=crop&q=60"
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/2.png"
     },
     {
       title: "AWS Cognito",
       tech: "React",
       preview: "Preview",
-      image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&auto=format&fit=crop&q=60"
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/ReactRedux.jpeg"
     }
   ];
 
