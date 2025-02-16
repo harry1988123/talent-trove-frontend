@@ -159,8 +159,8 @@ const Index = () => {
       <div className="fixed top-4 right-4 z-50">
         <ThemeToggle />
       </div>
-      
-      <motion.header 
+
+      <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -171,7 +171,7 @@ const Index = () => {
         }}
       >
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-        <motion.div 
+        <motion.div
           className="relative z-10"
           variants={containerVariants}
           initial="hidden"
@@ -190,7 +190,7 @@ const Index = () => {
           </motion.div>
           <motion.div variants={itemVariants} className="flex gap-4 justify-center items-center mx-auto">
             <Button variant="outline" size="icon" asChild>
-              <a href="https://github.com/harendra21" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/harry1988123" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
@@ -216,7 +216,7 @@ const Index = () => {
       </motion.header>
 
       <main className="container max-w-4xl mx-auto px-4 py-16">
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -231,7 +231,7 @@ const Index = () => {
           </div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -242,7 +242,7 @@ const Index = () => {
           <div className="relative pl-8">
             <div className="timeline-line" />
             {experiences.map((exp, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -265,7 +265,7 @@ const Index = () => {
           </div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -284,8 +284,8 @@ const Index = () => {
                 className="glass-card p-6 rounded-lg overflow-hidden"
               >
                 <div className="aspect-video mb-4 overflow-hidden rounded-lg">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
@@ -300,7 +300,7 @@ const Index = () => {
           </div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -334,7 +334,7 @@ const Index = () => {
           </div>
         </motion.section>
 
-        <motion.section 
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -343,7 +343,7 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
           <div className="glass-card p-8 rounded-lg text-center">
             <p className="text-lg mb-6">
-              I'm always interested in hearing about new projects and opportunities. 
+              I'm always interested in hearing about new projects and opportunities.
               Feel free to reach out if you'd like to discuss potential collaborations!
             </p>
             <Button asChild>
