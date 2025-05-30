@@ -82,51 +82,6 @@ const Index = () => {
     }
   ];
 
-  const projects = [
-    {
-      title: "Image Search",
-      tech: "React Project",
-      preview: "https://condescending-boyd-93b04c.netlify.app/",
-      github: "https://github.com/harry1988123/MindPeers_Task",
-      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p1.png"
-    },
-    {
-      title: "Crypto Tracker",
-      tech: "Angular Project",
-      preview: "https://614ef9cfa494f61449915e2b--friendly-dubinsky-56c396.netlify.app",
-      github: "https://github.com/harry1988123/CryptoTracker",
-      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p2.png"
-    },
-    {
-      title: "Emoji",
-      tech: "React Project",
-      preview: "https://cranky-pare-68e9cb.netlify.app/",
-      github: "https://github.com/harry1988123/rocketlane",
-      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p3.png"
-    },
-    {
-      title: "Credit Card",
-      tech: "Angular Project",
-      preview: "https://inspiring-khorana-c72295.netlify.app/",
-      github: "https://github.com/harry1988123/spaktask",
-      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p4.png"
-    },
-    {
-      title: "Inventory Management",
-      tech: "React Project",
-      preview: "https://deft-blini-6fc00e.netlify.app/",
-      github: "https://github.com/harry1988123/symbio-inventory",
-      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p5.png"
-    },
-    {
-      title: "AWS Cognito Login System",
-      tech: "React Project",
-      preview: "https://graceful-longma-307789.netlify.app/",
-      github: "https://github.com/harry1988123/dophinDemoApp",
-      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p6.png"
-    }
-  ];
-
   const technicalStrengths = {
     "Programming Languages": {
       skills: ["JavaScript", "React", "Angular"],
@@ -180,6 +135,51 @@ const Index = () => {
     }
   };
 
+  const projects = [
+    {
+      title: "Image Search",
+      tech: "React Project",
+      preview: "https://condescending-boyd-93b04c.netlify.app/",
+      github: "https://github.com/harry1988123/MindPeers_Task",
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p1.png"
+    },
+    {
+      title: "Crypto Tracker",
+      tech: "Angular Project",
+      preview: "https://614ef9cfa494f61449915e2b--friendly-dubinsky-56c396.netlify.app",
+      github: "https://github.com/harry1988123/CryptoTracker",
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p2.png"
+    },
+    {
+      title: "Emoji",
+      tech: "React Project",
+      preview: "https://cranky-pare-68e9cb.netlify.app/",
+      github: "https://github.com/harry1988123/rocketlane",
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p3.png"
+    },
+    {
+      title: "Credit Card",
+      tech: "Angular Project",
+      preview: "https://inspiring-khorana-c72295.netlify.app/",
+      github: "https://github.com/harry1988123/spaktask",
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p4.png"
+    },
+    {
+      title: "Inventory Management",
+      tech: "React Project",
+      preview: "https://deft-blini-6fc00e.netlify.app/",
+      github: "https://github.com/harry1988123/symbio-inventory",
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p5.png"
+    },
+    {
+      title: "AWS Cognito Login System",
+      tech: "React Project",
+      preview: "https://graceful-longma-307789.netlify.app/",
+      github: "https://github.com/harry1988123/dophinDemoApp",
+      image: "https://raw.githubusercontent.com/harry1988123/HarendraSinghPortfolio/master/images/p6.png"
+    }
+  ];
+
   return (
     <AnimatePresence>
       <motion.div 
@@ -201,15 +201,15 @@ const Index = () => {
           }}
         >
           <motion.div
-            className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+            className="absolute inset-0 hero-glass" />
           <motion.div
             className="relative z-10"
             variants={sectionVariants}
             initial="initial"
             animate="animate"
           >
-            <motion.div variants={sectionVariants}>
-              <Badge className="mb-4">Open to Opportunities</Badge>
+            <motion.div variants={sectionVariants} className="floating-element">
+              <Badge className="mb-4 glow-effect">Open to Opportunities</Badge>
             </motion.div>
             <motion.h1 variants={sectionVariants} className="text-4xl md:text-6xl font-bold mb-6">
               Harendra Singh
@@ -220,17 +220,17 @@ const Index = () => {
               <p className="text-base">pal.harendra95@gmail.com • +91-9790729403</p>
             </motion.div>
             <motion.div variants={sectionVariants} className="flex gap-4 justify-center items-center mx-auto">
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="outline" size="icon" asChild className="glass-card glow-effect">
                 <a href="https://github.com/harry1988123" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="outline" size="icon" asChild className="glass-card glow-effect">
                 <a href="https://linkedin.com/in/harendra-singh1995" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="outline" size="icon" asChild className="glass-card glow-effect">
                 <a href="mailto:pal.harendra95@gmail.com">
                   <Mail className="h-5 w-5" />
                 </a>
@@ -241,6 +241,7 @@ const Index = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
+            className="floating-element"
           >
             <ChevronDown className="absolute bottom-8 animate-bounce h-6 w-6 text-muted-foreground z-10" />
           </motion.div>
@@ -255,7 +256,7 @@ const Index = () => {
             className="mb-20"
           >
             <h2 className="text-3xl font-bold mb-8">Education</h2>
-            <div className="glass-card p-6 rounded-lg">
+            <div className="glass-card p-6 rounded-lg glow-effect">
               <h3 className="text-xl font-semibold">VIT Chennai</h3>
               <p className="text-muted-foreground">Bachelor of Technology in Computer Science</p>
               <p className="text-muted-foreground">CGPA: 8.03/10 (2015 – 2019)</p>
@@ -306,28 +307,31 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass-card p-6 rounded-lg overflow-hidden"
+                  className="project-card p-6 rounded-lg"
+                  whileHover={{ scale: 1.02 }}
                 >
                   <div className="aspect-video mb-4 overflow-hidden rounded-lg">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="project-image w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.tech}</p>
-                  <div className="flex gap-2">
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.preview} target="_blank" rel="noopener noreferrer">
-                        View Project
-                      </a>
-                    </Button>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        Source Code
-                      </a>
-                    </Button>
+                  <div className="project-content">
+                    <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+                    <p className="text-muted-foreground mb-4">{project.tech}</p>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" asChild className="glass-card">
+                        <a href={project.preview} target="_blank" rel="noopener noreferrer">
+                          View Project
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="sm" asChild className="glass-card">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          Source Code
+                        </a>
+                      </Button>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -348,6 +352,7 @@ const Index = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="glass-card p-6 rounded-lg"
+                  whileHover={{ scale: 1.01 }}
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <img src={icon} alt={category} className="w-8 h-8" />
@@ -355,7 +360,7 @@ const Index = () => {
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {skills.map((skill, i) => (
-                      <Badge key={i} variant="secondary">
+                      <Badge key={i} variant="secondary" className="skill-glass">
                         {skill}
                       </Badge>
                     ))}
@@ -369,12 +374,12 @@ const Index = () => {
             variants={sectionVariants}
           >
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
-            <div className="glass-card p-8 rounded-lg text-center">
+            <div className="glass-card p-8 rounded-lg text-center glow-effect">
               <p className="text-lg mb-6">
                 I'm always interested in hearing about new projects and opportunities.
                 Feel free to reach out if you'd like to discuss potential collaborations!
               </p>
-              <Button asChild>
+              <Button asChild className="glass-card glow-effect">
                 <a href="mailto:pal.harendra95@gmail.com">
                   Send me an email
                 </a>
