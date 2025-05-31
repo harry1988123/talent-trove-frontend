@@ -43,7 +43,10 @@ const Index = () => {
       description: [
         "Worked on the performance optimization for the initial load of the application from login to home page. Reduced the 33kb main chunk size. This optimization also led to a notable improvement in overall loading time, providing a smoother and faster user experience for customers accessing the application.",
         "Led the development of 130+ reusable UI components, reducing front-end development time by 40% across Android, iOS, and Web platforms. It brought the uniformity throughout the application on all 3 platforms Android, iOS and Web. Implemented storybook for better visual, Interaction testing and assertions.",
-        "Designed reusable custom screens that cut development time by 50%, reducing the codebase from 20K to 4K lines of code, increasing the multiple teams efficiency."
+        "Designed reusable custom screens that cut development time by 50%, reducing the codebase from 20K to 4K lines of code, increasing the multiple teams efficiency.",
+        "Developed UPI payment module at KreditBee, building BankAccount integration and PIN Management features. Optimized performance by implementing secondary web view loading and chunk pre-loading through service workers.",
+        "Established comprehensive testing infrastructure including Jest unit tests, Storybook component library, Playwright E2E automation, Code coverage and quality assurance workflows.",
+        "Migrated legacy Payments and Repayments modules from Redux-Saga to React Query and refactored the class-based components into functional components."
       ]
     },
     {
