@@ -214,7 +214,7 @@ const Index = () => {
             <motion.div variants={sectionVariants} className="floating-element">
               <Badge className="mb-4 glow-effect">Open to Opportunities</Badge>
             </motion.div>
-            <motion.h1 variants={sectionVariants} className="text-4xl md:text-6xl font-bold mb-6">
+            <motion.h1 variants={sectionVariants} className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">
               Harendra Singh
             </motion.h1>
             <motion.div variants={sectionVariants} className="text-xl md:text-2xl text-muted-foreground mb-4 space-y-2">
